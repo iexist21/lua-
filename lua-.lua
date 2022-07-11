@@ -8,11 +8,20 @@ defaultinserts = {
 };
 local INFILE = arg[1]
 local OUTFILE = arg[2]
-
+local AllowEmpty = arg[3]
 Getdat = io.open(INFILE, "r")
 data = Getdat:read("*a")
 Getdat:close()
-
+if AllowEmpty ~= "-a" then
+    if #data == 0 then
+    io.write("Please add code into the input file")
+    os.exit() 
+    end
+end
+if #data < 0 then
+    io.write("You somehow have negitive text, maybe try again????")
+    os.exit() 
+end
 Write = io.open(OUTFILE, "w")
 Write:write(defaultinserts[1])
 Write:write(prot)
