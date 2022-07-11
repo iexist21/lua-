@@ -1,4 +1,4 @@
-require('lib/OSTYPE')
+require('lib/oslib')
 function DelTemp()
     if os.name == "Windows" then
         os.execute('del "temp.lua"') 
