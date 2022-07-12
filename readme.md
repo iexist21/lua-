@@ -1,4 +1,4 @@
-#Version 0.0.1_B
+#lua- version 0.0.1_B_Bugfix_a
 
 #the syntax:
 -- new() basicly clones an object
