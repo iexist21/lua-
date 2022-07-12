@@ -9,7 +9,7 @@ function DelTemp()
 
     end
 end
--- For now, it will only inset functions, not replace the code at that area. | do not expect an experince like Typescript
+-- For now, it will only insert functions, not replace the code at that area. | do not expect an experince like Typescript
 local new = "function new(Table) o = {} setmetatable(o, Table) Table.__index = Table return o end \n "
 -- timing in seconds
 local sleep = "\n function sleep(time) starttime = os.time() repeat until os.time() > starttime + time end \n"
